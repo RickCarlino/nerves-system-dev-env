@@ -127,7 +127,7 @@ cd nerves_system_rpi/
 mix deps.get
 ```
 
-At this point you are ready to make changes to the system. See the [Nerves documentation for more information]().
+At this point you are ready to make changes to the system. See the [Nerves documentation for more information](https://hexdocs.pm/nerves/0.4.0/systems.html).
 
 Once you are done making change run
 
