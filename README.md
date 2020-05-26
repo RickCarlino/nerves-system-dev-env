@@ -7,7 +7,7 @@ If you are just trying to get started with the Nerves Framework, please see the 
 
 # Follow Along in an Empty Docker Container
 
-You can follow along in an Docker empty container. We will only cover Ubuntu 18 setup.
+You can follow along in an empty  Docker container. We will only cover Ubuntu 18.
 
 Create an empty container via:
 
@@ -15,7 +15,7 @@ Create an empty container via:
 sudo docker run --rm -i -t ubuntu:18.04 bash
 ```
 
-Since there are no volumes attached, **your progress will not be saved**. The Docker documentation explains this well.
+Since there are no volumes attached, **your progress will not be saved**. An explanation on how to attach a volume to a container can be found in the Docker documentation.
 
 # Install Nerves OS-Level Dependencies
 
@@ -33,7 +33,7 @@ apt install autoconf automake bc build-essential cmake curl file git libncurses5
 
 # Install ASDF
 
-[ASDF](https://github.com/asdf-vm/asdf) is a popular version manager in the Elixir community and is the recommended version manager for Nerves development on Linux. **Bash is the assumed system shell. See the ASDF documentation for other shells (Fish, ZSH, etc..)** The ASDF documentation explains how to install ASDF on different shells.
+[ASDF](https://github.com/asdf-vm/asdf) is a popular version manager in the Elixir community and is the recommended version manager for Nerves development on Linux. **Bash is the assumed system shell.** The ASDF documentation explains how to install ASDF on different shells.
 
 ```
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
@@ -42,7 +42,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
 ```
 
 # Install Erlang, Elixir
-ASDF follows that pattern of:
+ASDF follows the pattern of:
 
 1. Install plugins to manage the versions of a package.
 2. Install a specific version of a package.
@@ -103,7 +103,7 @@ MIX_TARGET=rpi mix deps.get
 MIX_TARGET=rpi mix firmware
 ```
 
-If there were no errors, you can exit the directory and destroy the remaining project files.
+If there were no errors, you can exit the directory and destroy the remaining project files. The purpose of building the project was to ensure all required dependencies had installed properly.
 
 ```
 cd ..
