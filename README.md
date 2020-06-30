@@ -1,3 +1,20 @@
+# In A Hurry?
+
+I built this so I could reproducibly create custom nerves systems and prevent local workstation dependencies from slowing me down.
+
+This section is essentially a "note to self".
+
+If you wipe your laptop, you can find a replacement image on the "releases" page of this repo.
+
+```bash
+# === RPi 3 System
+cd /home/rick/code/farmbot/farmbot_system_rpi3
+sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
+
+# === RPi 0 System
+cd /home/rick/code/farmbot/farmbot_system_rpi
+sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
+```
 # Creating A Nerves System Development Environment
 
 Below are instructions on how to get a dev setup for building custom Nerves systems on your machine or a VM. The instructions assume a clean installation of Ubuntu 18.04.
