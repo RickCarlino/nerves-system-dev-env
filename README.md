@@ -28,6 +28,13 @@ make menuconfig
 # === Build the system (time consuming)
 make
 
+# === Several hours pass. You may now build the artifacts...
+mix deps.get
+mix local.nerves
+mix nerves.artifact
+
+# You will now see a file that looks something like this:
+farmbot_system_rpi3-portable-1.2.3-farmbot.4-567890A.tar.gz
 ```
 # Creating A Nerves System Development Environment
 
