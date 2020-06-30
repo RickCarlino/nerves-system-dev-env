@@ -7,13 +7,27 @@ This section is essentially a "note to self".
 If you wipe your laptop, you can find a replacement image on the "releases" page of this repo.
 
 ```bash
-# === RPi 3 System
-cd /home/rick/code/farmbot/farmbot_system_rpi3
+# === `cd` into the custom nerves_system you want to build.
+#     farmbot_system_rpi3, farmbot_system_rpi, etc..
+cd WHEREVER_CUSTOM_NERVES_SYSTEM_REPO_IS
+
+# === Open a docker shell to work in. This will link a
+#     volume to the current repo. Inside docker, the repo
+#     lives in `/project`.
 sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
 
-# === RPi 0 System
-cd /home/rick/code/farmbot/farmbot_system_rpi
-sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
+# === Change the `VERSION` file (otherwise the build won't run)
+nano VERSION
+
+# === Open Nerves System Shell
+mix nerves.system.shell
+
+# === Do whatever it is you need to do in buildroot menuconfig
+make menuconfig
+
+# === Build the system (time consuming)
+make
+
 ```
 # Creating A Nerves System Development Environment
 
