@@ -14,6 +14,7 @@ cd WHEREVER_CUSTOM_NERVES_SYSTEM_REPO_IS
 # === Open a docker shell to work in. This will link a
 #     volume to the current repo. Inside docker, the repo
 #     lives in `/project`.
+# FISH SHELL (not Bash):
 sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
 
 # === Change the `VERSION` file (otherwise the build won't run)
