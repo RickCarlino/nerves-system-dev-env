@@ -20,6 +20,10 @@ sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
 # CD into working directory (you're in a container now)
 cd /project
 
+# Install whatever Elixir / Erlang version you need:
+asdf install elixir 1.10.4-otp-23 # <- Version changes over time
+asdf install erlang 23.1.1 # <- Version changes over time
+
 # Do the usual updates
 mix deps.get --all
 mix local.nerves
