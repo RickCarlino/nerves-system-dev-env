@@ -17,6 +17,13 @@ cd WHEREVER_CUSTOM_NERVES_SYSTEM_REPO_IS
 # FISH SHELL (not Bash):
 sudo docker run --rm -i -t -v (pwd):/project nerves_system_builder:may27 bash
 
+# CD into working directory (you're in a container now)
+cd /project
+
+# Do the usual updates
+mix deps.get --all
+mix local.nerves
+
 # === Change the `VERSION` file (otherwise the build won't run)
 nano VERSION
 
