@@ -116,6 +116,15 @@ mix local.hex
 mix local.rebar
 mix archive.install hex nerves_bootstrap
 mix deps.get
-mix nerves.shell
+mix compile
+mix nerves.system.shell
 make
+exit
+mv ~/.nerves/dl/*.tar.xz .
 ```
+You should have a file like this now:
+
+```
+nerves_system_rpi-portable-1.15.1-9A482BE.tar.gz
+```
+Publish that to Github
