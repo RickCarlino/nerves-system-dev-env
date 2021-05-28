@@ -26,9 +26,9 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 asdf plugin add erlang
 asdf plugin add elixir
 asdf install elixir 1.11.4-otp-23
-asdf install erlang 23.1.1
+asdf install erlang 23.3.4
 asdf global elixir 1.11.4-otp-23
-asdf global erlang 23.1.1
+asdf global erlang 23.3.4
 curl -sLO https://github.com/fwup-home/fwup/releases/download/v1.8.4/fwup_1.8.4_amd64.deb
 dpkg -i fwup_1.8.4_amd64.deb
 mix local.hex
@@ -100,6 +100,8 @@ git pull upstream 1.15.1
 ```
 
 It will certainly have merge conflict. Fix the conflicts and commit the changes.
+
+**Pro Tip:tm:** Make sure `.tool-versions` matches upstream!
 
 # Build the System
 
